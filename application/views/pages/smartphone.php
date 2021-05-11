@@ -8,9 +8,6 @@
                         <i class="zmdi zmdi-plus"></i>add smartphone
                     </a>
                 </strong>
-
-                <?php var_dump($data); ?>
-
             </div>
             <div class="card-body">
                 <table class="table table-data2">
@@ -35,14 +32,14 @@
                         </td>
                         <td>
                             <div class="table-data-feature">
-                                <a href="/smartphone/edit/1" class="item" data-toggle="tooltip" data-placement="top" title=""
+                                <a href="/smartphone/edit/<?= $item->kode_smartphone ?>" class="item" data-toggle="tooltip" data-placement="top" title=""
                                         data-original-title="Edit">
                                     <i class="zmdi zmdi-edit"></i>
                                 </a>
-                                <button class="item" data-toggle="tooltip" data-placement="top" title=""
+                                <a href="/smartphone/delete/<?= $item->kode_smartphone ?>" class="item" data-toggle="tooltip" data-placement="top" title=""
                                         data-original-title="Delete">
                                     <i class="zmdi zmdi-delete"></i>
-                                </button>
+                                </a>
                             </div>
                         </td>
                     </tr>

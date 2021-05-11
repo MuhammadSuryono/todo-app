@@ -57,7 +57,7 @@ $route['todo/(:any)'] = 'main/todo/$1';
 
 $route['smartphone'] = 'smartphone';
 $route['smartphone/create'] = 'smartphone/form_create';
-$route['smartphone/edit/(:any)'] = 'smartphone/form_edit';
+$route['smartphone/edit/(:any)'] = 'smartphone/form_edit/$1';
 $route['smartphone/store'] = 'smartphone/create';
 $route['smartphone/update/(:any)'] = 'smartphone/edit/$1';
 $route['smartphone/delete/(:any)'] = 'smartphone/delete/$1';

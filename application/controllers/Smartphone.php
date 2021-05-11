@@ -36,7 +36,7 @@ class Smartphone extends MY_Controller
     }
 
     public function create() {
-        $kodeSmartphone = $this->generate_random_string(6);
+        $kodeSmartphone = time();
         $seriSmartphone = $this->input->post('seri_smartphone');
         $merkSmartphone = $this->input->post('merk_smartphone');
         $ukuranLayar = $this->input->post('ukuran_layar');
@@ -60,7 +60,7 @@ class Smartphone extends MY_Controller
         }
     }
 
-    public function update($id) {
+    public function edit($id) {
         $seriSmartphone = $this->input->post('seri_smartphone');
         $merkSmartphone = $this->input->post('merk_smartphone');
         $ukuranLayar = $this->input->post('ukuran_layar');
@@ -86,7 +86,7 @@ class Smartphone extends MY_Controller
 
     public function delete($id) {
         $data = array(
-            "id" => $id
+            "kode_smartphone" => $id
         );
 
         $delete = $this->m_general->delete($this->table, $data);

@@ -5,13 +5,12 @@
                 <strong class="card-title mb-3">
                     Edit SmartPhone
                 </strong>
-
             </div>
             <div class="card-body">
-                <form action="<?= base_url('smartphone/store')?>" method="post">
+                <form action="<?= base_url('smartphone/update/'.$data['data_edit']->kode_smartphone )?>" method="post">
                     <div class="form-group">
                         <label class="form-control-label">Seri Smartphone</label>
-                        <input type="text" name="seri_smartphone" placeholder="Seri Smartphone" class="form-control">
+                        <input type="text" name="seri_smartphone" placeholder="Seri Smartphone" value="<?= $data['data_edit']->seri_smartphone ?>" class="form-control">
                     </div>
                     <div class="form-group">
                         <label class="form-control-label">Ukuran Layar</label>
@@ -37,26 +36,30 @@
                                 ]
                             );
                             foreach ($options as $option) {
-                                echo "<option value='".$option['id']."' >". $option['label']  ."</option> ";
+                                $selected = "";
+                                if ($data['data_edit']->merk_smartphone == $option['id']) {
+                                    $selected = 'selected';
+                                }
+                                echo "<option value='".$option['id']."' ".$selected." >". $option['label']  ."</option> ";
                             }
                             ?>
                         </select>
                     </div>
                     <div class="form-group">
                         <label class="form-control-label">Ukuran Layar</label>
-                        <input type="text" name="ukuran_layar" placeholder="Ukuran Layar" class="form-control">
+                        <input type="text" name="ukuran_layar" value="<?= $data['data_edit']->ukuran_layar ?>" placeholder="Ukuran Layar" class="form-control">
                     </div>
                     <div class="form-group">
                         <label class="form-control-label">Kamera Depan</label>
-                        <input type="text" name="kamera_depan" placeholder="Kamera Depan" class="form-control">
+                        <input type="text" name="kamera_depan" placeholder="Kamera Depan" value="<?= $data['data_edit']->kamera_depan ?>" class="form-control">
                     </div>
                     <div class="form-group">
                         <label class="form-control-label">Kamera Belakang</label>
-                        <input type="text" name="kamera_belakang" placeholder="Kamera Belakang" class="form-control">
+                        <input type="text" name="kamera_belakang" placeholder="Kamera Belakang" value="<?= $data['data_edit']->kamera_belakang ?>" class="form-control">
                     </div>
                     <div class="form-group">
                         <label class="form-control-label">Tanggal Launching</label>
-                        <input type="date" name="tanggal_launching" class="form-control">
+                        <input type="date" name="tanggal_launching" value="<?= $data['data_edit']->tanggal_launching ?>" class="form-control">
                     </div>
 
                     <button class="btn btn-primary btn-md">Submit</button>
