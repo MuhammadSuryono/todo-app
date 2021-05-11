@@ -13,7 +13,11 @@ class Main extends MY_Controller
     public function index()
     {
         $data = array(
-            array("title" => "Menguruskan Badan Sejenak", "created_at" => "2021-10-11 10:10")
+            array("title" => "Menguruskan Badan Sejenak", "created_at" => "2021-10-11 10:10"),
+            array("title" => "Puasa", "created_at" => "2021-10-11 10:10"),
+            array("title" => "Memasukkan anak ke sekolah", "created_at" => "2021-10-11 10:10"),
+            array("title" => "Rapat", "created_at" => "2021-10-11 10:10"),
+            array("title" => "Ujian Nasional", "created_at" => "2021-10-11 10:10")
         );
 
         $parsingData = array(
